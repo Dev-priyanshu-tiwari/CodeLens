@@ -107,7 +107,7 @@ const CodeLens = () => {
           </div>
           <div className="flex items-center gap-2.5 flex-wrap">
             <span className="text-[11px] font-medium tracking-[2px] text-primary border border-primary/30 rounded-full px-3 py-1 bg-primary/[0.07]">
-              ✦ Powered by Gemini AI
+              ✦ Powered by CodeLens AI
             </span>
             <button
               onClick={() => setSidebarOpen(true)}
