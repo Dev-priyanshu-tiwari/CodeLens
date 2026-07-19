@@ -19,7 +19,7 @@ Or run them separately in two terminals:
 
 ```bash
 npm run server   # backend on http://localhost:3001
-npm run dev      # frontend on http://localhost:5173
+npm run dev      # frontend on http://localhost:8080/
 ```
 
 Open http://localhost:5173 in your browser.
