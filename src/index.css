@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 20% 3%;
+    --foreground: 260 30% 94%;
+
+    --card: 240 20% 5%;
+    --card-foreground: 260 30% 94%;
+
+    --popover: 240 20% 5%;
+    --popover-foreground: 260 30% 94%;
+
+    --primary: 252 93% 71%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 15% 10%;
+    --secondary-foreground: 260 10% 66%;
+
+    --muted: 240 15% 12%;
+    --muted-foreground: 255 10% 50%;
+
+    --accent: 252 93% 71%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 350 80% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 100% / 0.06;
+    --border-hover: 0 0% 100% / 0.11;
+    --input: 0 0% 100% / 0.06;
+    --ring: 252 93% 71%;
+
+    --radius: 0.75rem;
+
+    --green: 155 100% 63%;
+    --yellow: 45 100% 70%;
+    --red: 350 100% 68%;
+    --cyan: 188 100% 61%;
+
+    --surface-1: 240 20% 4%;
+    --surface-2: 240 17% 7%;
+    --surface-3: 240 15% 10%;
+
+    --sidebar-background: 240 20% 4%;
+    --sidebar-foreground: 255 10% 50%;
+    --sidebar-primary: 252 93% 71%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 15% 12%;
+    --sidebar-accent-foreground: 260 30% 94%;
+    --sidebar-border: 0 0% 100% / 0.06;
+    --sidebar-ring: 252 93% 71%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono;
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Scanline overlay */
+.scanline {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 999;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--surface-1));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 3px;
+}
+
+@keyframes spin-fast {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
