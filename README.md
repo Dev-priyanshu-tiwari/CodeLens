@@ -1,6 +1,6 @@
 # CodeLens AI
 
-AI-powered code analyzer — paste code, get a plain-English breakdown (summary, line-by-line
+AI-powered code analyzer — paste code, get a plain-In English and Hinglish breakdown (summary, line-by-line
 explanation, concepts used, issues, and time/space complexity).
 
 - Frontend: React + Vite + TypeScript + Tailwind + shadcn/ui
